@@ -475,7 +475,7 @@ async function start() {
     }
   }
   const port = Number(process.env.PORT || 8001);
-  app.listen(port, "127.0.0.1", () => console.log(`API Wayire disponible sur http://127.0.0.1:${port}`));
+  app.listen(port, "0.0.0.0", () => console.log(`API Wayire démarrée sur le port ${port}`));
 }
 if (require.main === module) start().catch((err) => {
   console.error("Impossible de démarrer le backend:", err.message);
